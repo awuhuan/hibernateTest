@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+              version="2.0">
+
+
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        //连接驱动
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        //连接url,
+        <property name="url" value="${jdbc.url}" />
+        //连接用户名
+        <property name="username" value="${jdbc.username}" />
+        //连接密码
+        <property name="password" value="${jdbc.password}" />
+    </bean>
+
+
+</faces-config>
